@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "Ausgleichsverwaltung",
+        "description": "Ausgleichsverwaltung",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/webapp",
+        "appUrl": "#Ausgleichsverwaltung-Display",
+        "navigationComponentName": "com.convista",
+        "intentSemanticObject": "Ausgleichsverwaltung",
+        "intentAction": "Display",
+        "html5ApplicationName": "ausgleichsverwaltung",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "62d22fc0-b64d-4714-a9bc-a7ee4eddb93e"
+        ],
+        "contentPackages": [
+            "5181caa0-2d18-46b8-9c5a-1d9297ab1835"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Ausgleichsverwaltung",
+        "subtitle": "KPI Zahlen",
+        "searchKeywords": "Ausgleichsverwaltung,KPI Zahlen",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

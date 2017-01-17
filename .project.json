@@ -1,0 +1,21 @@
+{
+  "hcpdeploy": {
+    "account": "p1940381316trial",
+    "name": "ausgleichsverwaltung",
+    "lastVersionWeTriedToDeploy": "1.0.0"
+  },
+  "mockpreview": {
+    "mockUri": "",
+    "metadataFilePath": "",
+    "mockRequestsFilePath": "",
+    "loadJSONFiles": true,
+    "loadCustomRequests": false
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "",
+    "defaultLanguage": "",
+    "defaultI18NPropertyFile": "",
+    "resourceModelName": ""
+  }
+}

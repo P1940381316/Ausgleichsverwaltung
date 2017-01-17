@@ -1,0 +1,51 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:fm="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data" xmlns:tnt="sap.tnt" xmlns:ui.com="sap.suite.ui.commons" controllerName="com.convista.controller.Main">
+	<App>
+		<Page title="{i18n>titleTile}" showHeader="true">
+			<tnt:ToolPage id="toolPage">
+				<tnt:header visible="true">
+					<tnt:ToolHeader id="toolHeader1" visible="false">
+						<Button id="sideNavigationToggleButton" icon="sap-icon://menu2" visible="false" tooltip="Auswahl" type="Transparent"
+							press="onSideNavButtonPress" expanded="false">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+						<ToolbarSpacer/>
+						<Label text="{i18n>titleTile}" design="Bold" >
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Disappear"/>
+							</layoutData>
+						</Label>
+						<ToolbarSpacer/>
+					</tnt:ToolHeader>
+				</tnt:header>
+				<tnt:sideContent>
+					<tnt:SideNavigation expanded="false" itemSelect="onItemSelect" width="30%" height="100%">
+						<tnt:NavigationList items="{path: '/navigation'}" expanded="false">
+							<tnt:NavigationListItem text="{title}" icon="{icon}" enabled="{enabled}" expanded="{expanded}" items="{items}" key="{key}">
+								<tnt:NavigationListItem text="{title}" key="{key}" enabled="{enabled}"></tnt:NavigationListItem>
+							</tnt:NavigationListItem>
+						</tnt:NavigationList>
+					</tnt:SideNavigation>
+				</tnt:sideContent>
+				<tnt:mainContents>
+					<core:Fragment fragmentName="com.convista.view.Auswahl" type="XML"/>
+					<NavContainer id="pageContainer" width="100%" height="100%" class="navContainerControl sapUiSmallMarginBottom">
+						<core:Fragment fragmentName="com.convista.view.Zahlungseingang_flex" type="XML"/>
+						<core:Fragment fragmentName="com.convista.view.Lastschriften_flex" type="XML"/>
+						<core:Fragment fragmentName="com.convista.view.Ruecklaeufer_flex" type="XML"/>
+						<core:Fragment fragmentName="com.convista.view.Klaerbestand_flex" type="XML"/>
+					</NavContainer>
+				</tnt:mainContents>
+			</tnt:ToolPage>
+			<footer>
+				<Toolbar>
+					<ToolbarSpacer/>
+					<Button text="Export" press="onExportToPDF"/>
+				</Toolbar>
+			</footer>
+		</Page>
+	</App>
+</mvc:View>
